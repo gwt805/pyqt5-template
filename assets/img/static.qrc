@@ -1,0 +1,50 @@
+<RCC>
+  <qresource prefix="/">
+    <file>logo.png</file>
+    <file>exit.png</file>
+    <file>open.png</file>
+
+
+    <file>image/light/delete.png</file>
+    <file>image/light/left.png</file>
+    <file>image/light/right.png</file>
+    <file>image/light/rotate.png</file>
+
+    <file>image/dark/delete.png</file>
+    <file>image/dark/left.png</file>
+    <file>image/dark/right.png</file>
+    <file>image/dark/rotate.png</file>
+
+
+    <file>menu/light/collapse.png</file>
+    <file>menu/light/image.png</file>
+    <file>menu/light/setting.png</file>
+    <file>menu/light/menu.png</file>
+
+    <file>menu/dark/collapse.png</file>
+    <file>menu/dark/image.png</file>
+    <file>menu/dark/setting.png</file>
+    <file>menu/dark/menu.png</file>
+
+
+    <file>setting/light/folder-open.png</file>
+    <file>setting/light/folder-save.png</file>
+    <file>setting/light/info.png</file>
+    <file>setting/light/theme.png</file>
+
+    <file>setting/dark/folder-open.png</file>
+    <file>setting/dark/folder-save.png</file>
+    <file>setting/dark/info.png</file>
+    <file>setting/dark/theme.png</file>
+
+
+    <file>brmenu/light/folder-setting.png</file>
+    <file>brmenu/light/left-arrow.png</file>
+    <file>brmenu/light/right-arrow.png</file>
+
+    <file>brmenu/dark/folder-setting.png</file>
+    <file>brmenu/dark/left-arrow.png</file>
+    <file>brmenu/dark/right-arrow.png</file>
+
+  </qresource>
+</RCC>
