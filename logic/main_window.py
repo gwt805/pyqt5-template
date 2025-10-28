@@ -1,9 +1,9 @@
 import static
-from PyQt5.QtGui import QIcon, QPixmap
-from PyQt5.QtCore import Qt, pyqtSignal
-from view.main_window import UI_MainWindow
-from logic.image_show import AppImageView
+from PyQt5.QtCore import Qt
 from logic.setting import AppSetting
+from PyQt5.QtGui import QIcon, QPixmap
+from logic.image_show import AppImageView
+from view.main_window import UI_MainWindow
 from PyQt5.QtWidgets import QTreeWidgetItem
 
 class MainWindow(UI_MainWindow):
@@ -44,6 +44,7 @@ class MainWindow(UI_MainWindow):
 
     def changeMenuWidth(self):
         if not self.is_collapsed:
+            self.setMenuTooltips(True)
             self.menu_bottom.setColumnHidden(2, True)
             self.menu_scroll.setColumnHidden(2, True)
             self.menu_bottom.setMaximumWidth(70)
@@ -51,6 +52,7 @@ class MainWindow(UI_MainWindow):
             self.menu_collapse.setMaximumWidth(70)
             self.is_collapsed = True
         else:
+            self.setMenuTooltips(False)
             self.menu_bottom.setColumnHidden(2, False)
             self.menu_scroll.setColumnHidden(2, False)
             self.menu_bottom.setMaximumWidth(200)
@@ -77,3 +79,18 @@ class MainWindow(UI_MainWindow):
         else:
             for item, icon in self.iconlist:
                 item.setIcon(1, QIcon(f":/menu/light/{icon}"))
+
+    def setMenuTooltips(self, enable):
+        for i in range(self.menu_scroll.topLevelItemCount()):
+            item = self.menu_scroll.topLevelItem(i)
+            if enable:
+                item.setToolTip(1, item.text(2))
+            else:
+                item.setToolTip(1, "")
+
+        for i in range(self.menu_bottom.topLevelItemCount()):
+            item = self.menu_bottom.topLevelItem(i)
+            if enable:
+                item.setToolTip(1, item.text(2))
+            else:
+                item.setToolTip(1, "")
